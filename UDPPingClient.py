@@ -40,17 +40,19 @@ while seqno <= 10:
         rcvTime = time.time()
 
 	# Display the server address and server response as an output
-        print "Reply from "
-        print address
+        print "Reply from ",
+        print address,
         print data
 
 	# Round trip time is the difference between sent and received time
         print "RTT: " + str(rcvTime - sntTime)
+        print " "
 
     except timeout:
         # Server does not response
 	# Assume the packet is lost
         print "Request timed out."
+        print " "
 
     # Continue the loop
     # Fill in start			# Fill in end
